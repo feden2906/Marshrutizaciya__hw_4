@@ -1,8 +1,5 @@
 .navItem {
-    display: flex;
-    flex-wrap: wrap;
     width: 350px;
-
     border: plum 2px solid;
     text-align: center;
 }

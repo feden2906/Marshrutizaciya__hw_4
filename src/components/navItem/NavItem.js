@@ -33,12 +33,12 @@ class NavItem extends Component {
     const {item} = this.props
     return (
         <Router>
-          <div>
+          <div className='navItem'>
             <Link to={`/${item}`}><h2>{item}</h2></Link>
 
             <Switch>
-              <Route path={'/Користувачі'}> <AllUsers users={users} flag={usersFlag}/> </Route>
-              <Route path={'/Пости'}> <AllPosts posts={posts} flag={postsFlag}/> </Route>
+              <Route path={'/Користувачі'} render={() => <AllUsers users={users} flag={usersFlag}/>}/>
+              <Route path={'/Пости'} render={() => <AllPosts posts={posts} flag={postsFlag}/>}/>
               {/*<Route path={'/Фото'} component={}/>*/}
               {/*<Route path={'/Коменти'} component={}/>*/}
             </Switch>
