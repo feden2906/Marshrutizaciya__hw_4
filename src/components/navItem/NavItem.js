@@ -1,18 +1,13 @@
 import React, {Component} from 'react';
 import './NavItem.css'
+import {NavLink} from "react-router-dom";
 
-class NavItem extends Component {
-
-  render() {
-    const {item, props:{Router, NavLink}} = this.props
+const NavItem = ({item}) => {
     return (
-        <Router>
-          <div className='navItem'>
+        <div className='navItem'>
             <NavLink to={`/${item}`}><h2>{item}</h2></NavLink>
-          </div>
-        </Router>
+        </div>
     )
-  }
 }
 
 export default NavItem;

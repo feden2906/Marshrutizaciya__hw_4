@@ -1,17 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './AllUsers.css'
 import User from "../User/User";
 
-class AllUsers extends Component {
-
-  render() {
-    const {users, flag} = this.props
+const AllUsers = ({users, flag}) => {
     return (
         <div className='blockUsers'>
-          {flag && users.map(value => <User user={value} key={value.id}/>)}
+            {flag && users.map(value => <User user={value} key={value.id}/>)}
         </div>
     );
-  }
 }
 
 export default AllUsers;
